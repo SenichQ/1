@@ -457,10 +457,19 @@ html {
 	font-family: "Muller";
 	src: url("MullerExtraBold.eot");
 	src: local("Muller ExtraBold"), local("MullerExtraBold"),
-		url("MullerExtraBold.eot?#iefix") format("embedded-opentype"), url("MullerExtraBold.woff2") format("woff2"),
-		url("MullerExtraBold.woff") format("woff"), url("MullerExtraBold.ttf") format("truetype");
+		url("/fonts/MullerExtraBold.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/MullerExtraBold.woff2") format("woff2"), url("/fonts/MullerExtraBold.woff") format("woff"),
+		url("/fonts/MullerExtraBold.ttf") format("truetype");
 	font-weight: 800;
 	font-style: normal;
+}
+@font-face {
+	font-family: "MullerRegular";
+	src: url("../fonts/MullerRegular.eot");
+	src: url("../fonts/MullerRegular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/MullerRegular.woff") format("woff"), url("../fonts//MullerRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 400;
 }
 a {
 	text-decoration: none;
@@ -474,19 +483,20 @@ body {
 	color: #120b33;
 }
 .wrapper {
-	max-width: 1216px;
+	max-width: 1225px;
 	margin: 0 auto;
-	background-color: white;
-}
-.header {
-	background-color: black;
 }
 
+.header-nav {
+	display: flex;
+	justify-content: space-between;
+}
 .header-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-end;
 	justify-content: start;
+	padding-top: 14px;
 }
 .header-list {
 	display: flex;
@@ -496,13 +506,14 @@ body {
 .header-item {
 	margin-right: 40px;
 }
-.header-item:last-child {
-	margin-right: 182px;
-}
+
 .yllow-group-logo {
+	font-family: "Muller";
+	font-weight: 700;
+	font-style: bold;
 	background: #ffd54e;
 	border-radius: 14px;
-	width: 140px;
+	width: 133px;
 	height: 20px;
 	font-size: 12px;
 	line-height: 20px;
@@ -521,7 +532,7 @@ body {
 	margin-right: 60px;
 }
 .header-item-right-two {
-	margin-left: 50px;
+	margin-left: 49px;
 	width: 153px;
 	height: 47px;
 	background: #644bec;
@@ -530,15 +541,18 @@ body {
 	top: 14px;
 }
 .header-link {
+	font-family: "MullerRegular";
+	font-weight: 400;
+	font-style: normal;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.02em;
 	color: #120b33;
 }
 .header-link-tel {
-	font-family: Muller;
-	font-style: normal;
-	font-weight: bold;
+	font-family: "Muller";
+	font-weight: 800;
+	font-style: bold;
 	font-size: 22px;
 	line-height: 22px;
 	color: #120b33;
@@ -549,7 +563,7 @@ body {
 	flex-wrap: wrap;
 	align-items: flex-end;
 	justify-content: space-between;
-	margin-left: 178px;
+	margin-left: 132px;
 }
 
 .header-list-left {
@@ -563,11 +577,150 @@ body {
 }
 
 .header-link-right {
+	font-family: "Muller";
+	font-style: normal;
+	font-weight: bold;
 	font-size: 15px;
 	line-height: 15px;
 	color: #ffffff;
 	text-align: center;
 	position: relative;
 	left: 36px;
-	top: 13px;
+	top: 15px;
+}
+.header-link:hover,
+.header-link:focus,
+.header-link:active,
+.header-link-tel:hover,
+.header-link-tel:focus,
+.header-link-tel:active,
+.header-link-right:hover,
+.header-link-right:focus,
+.header-link-right:active {
+	opacity: 0.75;
+}
+/* MAIN */
+.intro {
+	height: 100vh;
+	padding-top: 107px;
+	z-index: 14;
+}
+.intro-title {
+	font-family: "Muller";
+	font-style: normal;
+	font-weight: 800;
+	font-size: 60px;
+	line-height: 120%;
+	color: #120b33;
+	margin-bottom: 32px;
+	position: relative;
+}
+.intro-subtitle {
+	font-family: "Muller";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 120%;
+	max-width: 416px;
+	color: rgba(18, 11, 51, 0.7);
+	margin-bottom: 50px;
+}
+.main {
+	/*background-image: url(/img/GIRL.png);
+	background-repeat: no-repeat;
+	background-position: right; */
+}
+.form-info {
+	display: flex;
+	flex-wrap: wrap;
+}
+.form-number-info {
+	width: 338px;
+	height: 48px;
+	font-family: "MullerRegular";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 16px;
+	color: rgba(20, 29, 48, 0.7);
+	background: rgba(100, 75, 236, 0.1);
+	border-radius: 8px;
+	outline: none;
+	border: none;
+	margin-right: 18px;
+	margin-bottom: 120px;
+}
+.button-form {
+	width: 190px;
+	height: 45px;
+	background: #644bec;
+	border-radius: 100px;
+	outline: none;
+	border: none;
+	font-family: Muller;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 23px;
+	text-align: center;
+	text-transform: capitalize;
+	color: #ffffff;
+	margin-bottom: 120px;
+}
+.group-info-block {
+	max-width: 1220px;
+	display: flex;
+	flex-wrap: nowrap;
+	padding-bottom: 120px;
+}
+.block-info {
+	width: 290px;
+	height: 256px;
+	background: #ffffff;
+	border: 4px solid #f1f4ff;
+	box-sizing: border-box;
+	border-radius: 12px;
+	margin-right: 18px;
+}
+.block-info:last-child {
+	margin-right: 0px;
+}
+.icon-info {
+	padding-top: 32px;
+	padding-left: 41px;
+	padding-bottom: 30px;
+}
+.text-info {
+	width: 200px;
+	/* align-items: center; */
+	text-align: ;
+	font-family: "Muller";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 28px;
+	color: rgba(20, 29, 48, 0.7);
+	margin: auto;
+}
+.footer-content {
+	width: 1000px;
+	height: 325px;
+	margin: auto;
+	background-color: gray;
+}
+.footer-block {
+	background: #141d30;
+	width: 1440px;
+	margin: auto;
+}
+.h-footer {
+	font-family: Muller;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 22px;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+	padding-top: 69px;
+	padding-left: 160px;
 }
