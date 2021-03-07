@@ -471,6 +471,15 @@ html {
 	font-style: normal;
 	font-weight: 400;
 }
+@font-face {
+	font-family: "MullerMedium";
+	src: url("/fonts/MullerMedium.eot");
+	src: url("/fonts/MullerMedium.eot") format("embedded-opentype"), url("/fonts/MullerMedium.woff") format("woff"),
+		url("/fonts/MullerMedium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 500;
+}
+
 a {
 	text-decoration: none;
 }
@@ -483,8 +492,9 @@ body {
 	color: #120b33;
 }
 .wrapper {
-	max-width: 1225px;
+	max-width: 1235px;
 	margin: 0 auto;
+	background-color: white;
 }
 
 .header-nav {
@@ -502,9 +512,11 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-end;
+	padding-left: 8px;
+	padding-top: 2px;
 }
 .header-item {
-	margin-right: 40px;
+	margin-right: 41px;
 }
 
 .yllow-group-logo {
@@ -532,13 +544,13 @@ body {
 	margin-right: 60px;
 }
 .header-item-right-two {
-	margin-left: 49px;
+	margin-left: 46px;
 	width: 153px;
-	height: 47px;
+	height: 45px;
 	background: #644bec;
 	border-radius: 50px;
 	position: relative;
-	top: 14px;
+	top: 9px;
 }
 .header-link {
 	font-family: "MullerRegular";
@@ -563,7 +575,7 @@ body {
 	flex-wrap: wrap;
 	align-items: flex-end;
 	justify-content: space-between;
-	margin-left: 132px;
+	margin-left: 125px;
 }
 
 .header-list-left {
@@ -577,9 +589,9 @@ body {
 }
 
 .header-link-right {
-	font-family: "Muller";
+	font-family: "MullerMedium";
 	font-style: normal;
-	font-weight: bold;
+	font-weight: 400;
 	font-size: 15px;
 	line-height: 15px;
 	color: #ffffff;
@@ -600,10 +612,12 @@ body {
 	opacity: 0.75;
 }
 /* MAIN */
+
 .intro {
 	height: 100vh;
 	padding-top: 107px;
 	z-index: 14;
+	background-color: black;
 }
 .intro-title {
 	font-family: "Muller";
@@ -616,7 +630,7 @@ body {
 	position: relative;
 }
 .intro-subtitle {
-	font-family: "Muller";
+	font-family: "MullerMedium";
 	font-style: normal;
 	font-weight: 500;
 	font-size: 20px;
@@ -625,14 +639,20 @@ body {
 	color: rgba(18, 11, 51, 0.7);
 	margin-bottom: 50px;
 }
-.main {
-	/*background-image: url(/img/GIRL.png);
-	background-repeat: no-repeat;
-	background-position: right; */
+.girl {
+	position: absolute;
+	top: 1px;
+	right: 83px;
+	margin-left: 350px;
+	z-index: 10;
 }
 .form-info {
 	display: flex;
 	flex-wrap: wrap;
+}
+.number-form {
+	margin-left: 4px;
+	padding-top: 5px;
 }
 .form-number-info {
 	width: 338px;
@@ -647,24 +667,25 @@ body {
 	border-radius: 8px;
 	outline: none;
 	border: none;
-	margin-right: 18px;
+	padding-bottom: 8px;
+	margin-right: 16px;
 	margin-bottom: 120px;
 }
 .button-form {
+	font-family: "MullerMedium";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 19.5px;
+	line-height: 24px;
+	text-align: center;
+	text-transform: capitalize;
+	color: #ffffff;
 	width: 190px;
 	height: 45px;
 	background: #644bec;
 	border-radius: 100px;
 	outline: none;
 	border: none;
-	font-family: Muller;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 20px;
-	line-height: 23px;
-	text-align: center;
-	text-transform: capitalize;
-	color: #ffffff;
 	margin-bottom: 120px;
 }
 .group-info-block {
@@ -681,32 +702,34 @@ body {
 	box-sizing: border-box;
 	border-radius: 12px;
 	margin-right: 18px;
+	z-index: 12;
 }
 .block-info:last-child {
 	margin-right: 0px;
 }
 .icon-info {
-	padding-top: 32px;
-	padding-left: 41px;
+	padding-top: 24px;
+	padding-left: 37px;
 	padding-bottom: 30px;
 }
 .text-info {
-	width: 200px;
+	width: 195px;
+	padding-left: -1px;
 	/* align-items: center; */
-	text-align: ;
-	font-family: "Muller";
+
+	font-family: "MullerMedium";
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
-	line-height: 28px;
+	line-height: 150%;
 	color: rgba(20, 29, 48, 0.7);
 	margin: auto;
 }
 .footer-content {
-	width: 1000px;
+	max-width: 1008px;
 	height: 325px;
-	margin: auto;
-	background-color: gray;
+	margin-left: 215px;
+	background-color: #141d30;
 }
 .footer-block {
 	background: #141d30;
@@ -721,6 +744,123 @@ body {
 	line-height: 22px;
 	letter-spacing: 0.02em;
 	color: #ffffff;
-	padding-top: 69px;
-	padding-left: 160px;
+	padding-bottom: 21px;
+}
+.header-footer {
+	max-width: 450px;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 17px;
+	margin-right: 218px;
+}
+
+.text-header-footer {
+	font-family: "MullerRegular";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 20px;
+
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.group-footer-block {
+	max-width: 1000px;
+	display: flex;
+	padding-top: 52px;
+}
+.text-h-footer-rigth {
+	font-family: "MullerRegular";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 22px;
+	color: #ffffff;
+	margin-bottom: 32px;
+}
+.svg-footer {
+	margin-right: 16px;
+}
+.svg-footer:last-child {
+	margin-right: 29px;
+}
+.footer-header {
+	display: flex;
+}
+.footer-header-block {
+	display: block;
+	max-width: 446px;
+	margin-right: 516px;
+	margin-top: 69px;
+}
+.footer-header-block-right {
+	display: flex;
+	float: right;
+	max-width: 271px;
+	margin-top: 52px;
+}
+.footer-header-text-left {
+	font-family: "MullerRegular";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 22px;
+	max-width: 210px;
+	color: #ffffff;
+}
+.footer-header-text-right {
+	font-family: "MullerRegular";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 22px;
+
+	color: #ffffff;
+}
+.footer-header-text-p {
+	display: flex;
+	max-width: 446px;
+	margin-top: 21px;
+	font-family: Muller;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 20px;
+
+	color: rgba(255, 255, 255, 0.7);
+}
+.footer-group-svg {
+	float: right;
+	margin-top: -32px;
+}
+.footer-end {
+	display: flex;
+	max-width: 1002px;
+	flex-direction: row;
+	margin-top: 94px;
+	white-space: nowrap;
+}
+.footer-2020 {
+	margin-right: 103px;
+	font-family: "MullerRegular";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 16px;
+	color: #ffffff;
+}
+.footer-a {
+	margin-right: 100px;
+	font-family: Muller;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 16px;
+
+	text-decoration-line: underline;
+
+	color: #ffffff;
+}
+.footer-a:last-child {
+	margin-right: 0px;
 }
