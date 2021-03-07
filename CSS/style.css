@@ -617,7 +617,7 @@ body {
 	height: 100vh;
 	padding-top: 107px;
 	z-index: 14;
-	background-color: black;
+
 }
 .intro-title {
 	font-family: "Muller";
@@ -642,8 +642,7 @@ body {
 .girl {
 	position: absolute;
 	top: 1px;
-	right: 83px;
-	margin-left: 350px;
+	margin-left: 340px;
 	z-index: 10;
 }
 .form-info {
