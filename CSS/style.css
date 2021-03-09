@@ -479,6 +479,14 @@ html {
 	font-style: normal;
 	font-weight: 500;
 }
+@font-face {
+	font-family: "MullerLight";
+	src: url("/fonts/MullerLight.eot");
+	src: url("/fonts/MullerLight.eot") format("embedded-opentype"), url("/fonts/MullerLight.woff") format("woff"),
+		url("/fonts/MullerLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 300;
+}
 
 a {
 	text-decoration: none;
@@ -617,7 +625,6 @@ body {
 	height: 100vh;
 	padding-top: 107px;
 	z-index: 14;
-
 }
 .intro-title {
 	font-family: "Muller";
@@ -711,6 +718,11 @@ body {
 	padding-left: 37px;
 	padding-bottom: 30px;
 }
+.icon-info-two {
+	padding-top: 24px;
+	padding-left: 37px;
+	padding-bottom: 30px;
+}
 .text-info {
 	width: 195px;
 	padding-left: -1px;
@@ -723,6 +735,18 @@ body {
 	line-height: 150%;
 	color: rgba(20, 29, 48, 0.7);
 	margin: auto;
+}
+.text-info-two{
+	width: 195px;
+	padding-left: -1px;
+	font-family: "MullerMedium";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 150%;
+	color: rgba(20, 29, 48, 0.7);
+	margin: auto;
+
 }
 .footer-content {
 	max-width: 1008px;
@@ -841,7 +865,7 @@ body {
 }
 .footer-2020 {
 	margin-right: 103px;
-	font-family: "MullerRegular";
+	font-family: "MullerLight";
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16px;
@@ -850,7 +874,7 @@ body {
 }
 .footer-a {
 	margin-right: 100px;
-	font-family: Muller;
+	font-family: "MullerLight";
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16px;
@@ -862,4 +886,117 @@ body {
 }
 .footer-a:last-child {
 	margin-right: 0px;
+}
+
+@media (max-width: 768px) {
+	.wrapper {
+		max-width: 730px;
+	}
+	.header-link-tel {
+		display: none;
+	}
+	.header-link {
+		display: none;
+	}
+	.header-item-right-two {
+		margin-left: 368px;
+	}
+	.header-wrapper {
+		padding-top: 0px;
+	}
+	.header-logo {
+		margin-right: 0px;
+		margin-top: 38px;
+		margin-left: 16px;
+	}
+	.header-item-right-two {
+		margin-right: 0;
+		top: -29px;
+	}
+	.intro {
+		padding-top: 50px;
+	}
+	.intro-title {
+		font-family: "Muller";
+		font-style: normal;
+		font-weight: 800;
+		font-size: 50px;
+		line-height: 120%;
+		color: #120b33;
+	}
+	.intro-subtitle {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 120%;
+		color: rgba(18, 11, 51, 0.7);
+		position: relative;
+		top: -2px;
+		left: -4px;
+	}
+	.girl {
+		top: 129px;
+		margin-left: 194px;
+		max-width: 660px;
+	}
+	.form-number-info {
+		position: relative;
+		bottom: 6px;
+		left: -3px;
+	}
+	.button-form {
+		position: relative;
+		top: -7px;
+	}
+	.button-form {
+		padding-top: 4px;
+		padding-left: 0px;
+		margin-bottom: 120px;
+	}
+	.block-info {
+		width: 169px;
+		height: 188px;
+	}
+	.text-info {
+		width: 125px;
+		height: 103px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 130%;
+		color: rgba(20, 29, 48, 0.7);
+		margin-left: 21px;
+		margin-top: 2px;
+	}
+	.text-info-two {
+		width: 130px;
+		height: 103px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 130%;
+		color: rgba(20, 29, 48, 0.7);
+		margin-left: 19px;
+		margin-top: 1px;
+	}
+	.icon-info {
+		max-width: 18px;
+		padding-top: 0px;
+		padding-left: 0px;
+		padding-bottom: 0px;
+		margin-left: 22px;
+		margin-top: 17px;
+		margin-bottom: 18px;
+	}
+	}
+	.icon-info-two {
+		max-width: 13px;
+		max-height: 19px;
+		padding-top: 0px;
+		padding-left: 0px;
+		padding-bottom: 0px;
+		margin-left: 23px;
+		margin-top: 17px;
+		margin-bottom: 18px;
+	}
 }
