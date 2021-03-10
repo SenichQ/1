@@ -487,7 +487,9 @@ html {
 	font-style: normal;
 	font-weight: 300;
 }
-
+html {
+	overflow-x: hidden;
+}
 a {
 	text-decoration: none;
 }
@@ -498,6 +500,9 @@ body {
 	line-height: 1.2;
 	font-weight: normal;
 	color: #120b33;
+}
+.header {
+	
 }
 .wrapper {
 	max-width: 1235px;
@@ -619,7 +624,100 @@ body {
 .header-link-right:active {
 	opacity: 0.75;
 }
+
+/*BURGER MENU*/
 /* MAIN */
+.hamburger-menu {
+	display: none;
+}
+#menu__toggle {
+	opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+	transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+	visibility: visible;
+	left: 510px;
+}
+
+.menu__btn {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 42px;
+	left: 709px;
+	width: 33px;
+	height: 25px;
+
+	cursor: pointer;
+	z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+	display: block;
+	position: absolute;
+
+	width: 33px;
+	height: 3px;
+	background: #120b33;
+
+	transition-duration: 0.25s;
+}
+.menu__btn > span::before {
+	content: "";
+	top: -10px;
+}
+.menu__btn > span::after {
+	content: "";
+	top: 10px;
+}
+
+.menu__box {
+	display: block;
+	position: fixed;
+	visibility: hidden;
+	top: 58px;
+	left: 510px;
+	width: 195px;
+	height: 14%;
+	margin: 0;
+	padding: 29px 0px;
+	list-style: none;
+	background-color: #eceff1;
+	box-shadow: 1px 0px 6px rgb(0 0 0 / 20%);
+	transition-duration: 0.25s;
+	z-index: 11;
+}
+
+.menu__item {
+	display: block;
+	padding: 11px 21px;
+	color: #333;
+	font-family: "MullerMedium", sans-serif;
+	font-size: 15px;
+	text-decoration: none;
+	transition-duration: 0.25s;
+}
+.menu__item:last-child {
+	padding-bottom: 10px;
+}
+.menu__item:hover {
+	background-color: #cfd8dc;
+}
+
+/*//*/
 
 .intro {
 	height: 100vh;
@@ -651,6 +749,7 @@ body {
 	top: 1px;
 	margin-left: 340px;
 	z-index: 10;
+	max-width: 1200px;
 }
 .form-info {
 	display: flex;
@@ -736,7 +835,7 @@ body {
 	color: rgba(20, 29, 48, 0.7);
 	margin: auto;
 }
-.text-info-two{
+.text-info-two {
 	width: 195px;
 	padding-left: -1px;
 	font-family: "MullerMedium";
@@ -746,7 +845,6 @@ body {
 	line-height: 150%;
 	color: rgba(20, 29, 48, 0.7);
 	margin: auto;
-
 }
 .footer-content {
 	max-width: 1008px;
@@ -884,7 +982,15 @@ body {
 
 	color: #ffffff;
 }
-.footer-a:last-child {
+
+.footer-a-user {
+	font-family: "MullerLight";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 16px;
+	text-decoration-line: underline;
+	color: #ffffff;
 	margin-right: 0px;
 }
 
@@ -988,7 +1094,7 @@ body {
 		margin-top: 17px;
 		margin-bottom: 18px;
 	}
-	}
+
 	.icon-info-two {
 		max-width: 13px;
 		max-height: 19px;
@@ -998,5 +1104,66 @@ body {
 		margin-left: 23px;
 		margin-top: 17px;
 		margin-bottom: 18px;
+	}
+	.footer-content {
+		max-width: 730px;
+		margin-left: 17px;
+		height: 399px;
+	}
+	.footer-header-block {
+		max-width: 191px;
+		margin-right: 247px;
+		margin-top: 70px;
+	}
+	.footer-header-text-left {
+		font-size: 20px;
+		line-height: 20px;
+		letter-spacing: 0.02em;
+	}
+	.footer-header-block-right {
+		display: flex;
+		float: right;
+		max-width: 296px;
+		margin-top: 50px;
+	}
+	.footer-header-text-right {
+		font-size: 24px;
+		line-height: 24px;
+	}
+	.footer-header-text-p {
+		max-width: 303px;
+		margin-top: 23px;
+		font-family: "MullerLight";
+		font-size: 14px;
+		line-height: 14px;
+		color: rgba(255, 255, 255, 0.7);
+	}
+	.footer-group-svg {
+		float: right;
+		margin-top: -28px;
+		margin-right: 32px;
+	}
+	.footer-group-svg {
+		float: right;
+		margin-top: -28px;
+		margin-right: 9px;
+	}
+	.footer-end {
+		max-width: 309px;
+		flex-direction: column;
+	}
+	.footer-a-user {
+		order: 2;
+		margin-bottom: 38px;
+	}
+	.footer-a {
+		order: 3;
+		margin-bottom: 44px;
+	}
+	.footer-2020 {
+		order: 4;
+	}
+	.hamburger-menu {
+		display: block;
 	}
 }
